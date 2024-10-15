@@ -44,7 +44,7 @@ psc <- raw_milk %>%
 
 #tables for each powder test type
 p.msc <- powder %>%
-  filter(test == "TSC") %>%
+  filter(test == "MSC") %>%
   group_by(sampleID, int_type) %>%
   summarize(meanlog = mean(log_conc)) %>%
   pivot_wider(names_from = int_type, values_from = meanlog)
