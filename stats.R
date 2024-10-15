@@ -37,12 +37,12 @@ wilcox.test(p.msc$post, p.msc$pre, paired = FALSE, alternative = "l")
 wilcox.test(p.tsc$post, p.tsc$pre, paired = FALSE, alternative = "l")
 
 #powder standard deviations
-p.msc.pre <- subset(powder, int_type == "pre" | test == "MSC")
+p.msc.pre <- subset(powder, int_type == "pre" & test == "MSC")
 sd(p.msc.pre$log_conc)
-p.msc.post <- subset(powder, int_type == "post" | test == "MSC")
+p.msc.post <- subset(powder, int_type == "post" & test == "MSC")
 sd(p.msc.post$log_conc)
 
-p.tsc.pre <- subset(powder, int_type == "pre" | test == "TSC")
+p.tsc.pre <- subset(powder, int_type == "pre" & test == "TSC")
 sd(p.tsc.pre$log_conc)
-p.tsc.post <- subset(powder, int_type == "post" | test == "TSC")
+p.tsc.post <- subset(powder, int_type == "post" & test == "TSC")
 sd(p.tsc.post$log_conc)
