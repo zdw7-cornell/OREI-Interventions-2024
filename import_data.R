@@ -1,10 +1,6 @@
 #load packages for all R files
-library(dplyr)
-library(ggplot2)
 library(tidyverse)
-library(tidyr)
 library(ggtext)
-library(stringr)
 library(lmerTest)
 
 
